@@ -1,0 +1,48 @@
+@use 'reset';
+@use 'variables' as *;
+
+.swiper {
+    width: 100%;
+    height: 100vh;
+}
+
+// 共用區
+section {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.title {
+    margin: $space-title;
+
+    h2 {
+        position: relative;
+        display: flex;
+        align-items: center;
+        font-size: $f-s-xl;
+        border-left: solid 5px $Charcoal;
+        padding-left: $space-sm;
+
+        span {
+            font-size: $f-s-sm;
+            padding-left: $space-xs;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            right: 0;
+            width: calc(100% - 10rem);
+            height: 3px;
+            background-color: $Charcoal;
+        }
+    }
+}
+
+.list-box {
+    display: grid;
+    gap: 30px;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+// 最新消息
