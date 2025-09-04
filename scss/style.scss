@@ -1,5 +1,6 @@
 @use 'reset';
 @use 'variables' as *;
+@use 'function';
 
 .swiper {
     width: 100%;
@@ -30,8 +31,8 @@ section {
 
         &::after {
             content: '';
-            position: absolute;
-            right: 0;
+            position: relative;
+            left: 14px;
             width: calc(100% - 10rem);
             height: 3px;
             background-color: $Charcoal;
@@ -43,6 +44,148 @@ section {
     display: grid;
     gap: 30px;
     grid-template-columns: 1fr 1fr 1fr;
+
+    .item {
+        a {
+            position: relative;
+
+            h3 {
+                position: absolute;
+                background-color: $alpha-b-60;
+                width: 100%;
+                height: 100%;
+                color: $White;
+                font-size: $f-s-xl;
+                @extend %flex-center;
+                opacity: 0;
+                transition: $speed-fast;
+
+                &:hover {
+                    opacity: 1;
+                }
+            }
+        }
+    }
 }
 
-// 最新消息
+// 首頁
+#new {
+    .mask {
+        mask-size: contain;
+        mask-repeat: no-repeat;
+        mask-position: center;
+    }
+
+    .mask-1 {
+        mask-image: url(../images/blobs-1.svg);
+    }
+
+    .mask-2 {
+        mask-image: url(../images/blobs-2.svg);
+    }
+
+    .mask-3 {
+        mask-image: url(../images/blobs-3.svg);
+    }
+
+}
+
+#hot {
+    .clip {
+        // 圓形 => 50% = 容器一樣尺寸
+        clip-path: circle(40%);
+
+        // 橢圓形 => w h 50% = 容器一樣尺寸, x y 以形狀中心為0，50%為置中
+        // clip-path: ellipse(25% 40% at 50% 50%);
+
+        // 多邊形 => 設定多點的xy位置
+        // clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+
+        // 矩形 =>
+        // clip-path: inset(10% 10% 10% 10%);
+    }
+}
+
+#shop {
+    .container {
+        display: grid;
+        gap: 30px;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(4, 320px);
+
+        >a {
+            font-size: $f-s-lg;
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            padding: 50px;
+        }
+
+        .s1 {
+            background-image: url(../images/shop_1.png);
+
+            justify-content: center;
+            align-items: center;
+        }
+
+        .s2 {
+            background-image: url(../images/shop_2.png);
+
+            justify-content: center;
+            align-items: center;
+            color: $White;
+        }
+
+        .s3 {
+            background-image: url(../images/shop_3.png);
+            grid-column: 1 / 3;
+
+            justify-content: flex-end;
+            align-items: center;
+        }
+
+        .s4 {
+            background-image: url(../images/shop_4.png);
+            grid-row: 3 / 5;
+
+            justify-content: center;
+        }
+
+        .s5 {
+            background-image: url(../images/shop_5.png);
+
+            justify-content: flex-end;
+            align-items: center;
+        }
+
+        .s6 {
+            background-image: url(../images/shop_6.png);
+            justify-content: flex-start;
+            align-items: center;
+        }
+    }
+}
+
+
+// details.html
+.detail-box {
+    display: grid;
+    gap: 30px;
+    grid-template-columns: 5fr 4fr;
+}
+
+// jQuery UI tabs
+.ui-tabs .ui-tabs-nav {
+    display: flex;
+}
+
+
+
+// 頁尾
+footer {
+    line-height: 60px;
+    text-align: center;
+    background-color: $Black;
+    color: $White;
+    margin-top: $space-xl;
+}

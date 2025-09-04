@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>女裝-ZARA</title>
+    <!-- jQuery UI CSS CDN -->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.14.1/themes/base/jquery-ui.css">
+    <!-- My CSS 權重最重一定是放在最下面 -->
+    <link rel="stylesheet" href="./css/style.min.css">
+</head>
+
+<body>
+    <header class="navbar">Navbar</header>
+    <main>
+        <section>
+            <header class="title">
+                <h2>ZT系列 軟質T恤 - 中灰色</h2>
+            </header>
+
+            <div class="detail-box">
+                <!-- 頁籤相簿 jQuery UI tabs -->
+                <div id="album">
+                    <!-- 頁籤內容 -->
+                    <div id="tabs-1">
+                        123
+                    </div>
+                    <div id="tabs-2">
+                        123
+                    </div>
+                    <div id="tabs-3">
+                        123
+                    </div>
+                    <div id="tabs-4">
+                        123
+                    </div>
+                    <div id="tabs-5">
+                        123
+                    </div>
+
+                    <!-- 頁籤按鈕 -->
+                    <ul>
+                        <li><a href="#tabs-1"><img src="./images/details/detail-1.jpg" alt=""></a></li>
+                        <li><a href="#tabs-2"><img src="./images/details/detail-2.jpg" alt=""></a></li>
+                        <li><a href="#tabs-3"><img src="./images/details/detail-3.jpg" alt=""></a></li>
+                        <li><a href="#tabs-4"><img src="./images/details/detail-4.jpg" alt=""></a></li>
+                        <li><a href="#tabs-5"><img src="./images/details/detail-5.jpg" alt=""></a></li>
+                    </ul>
+                </div>
+
+
+                <!-- 詳細規格 -->
+                <div class="details"></div>
+            </div>
+
+            <!-- html編輯器 -->
+            <div class="content"></div>
+        </section>
+    </main>
+
+    <!-- 頁尾 -->
+    <footer>copyright &copy; 2025 Zara.</footer>
+
+    <!-- jQuery 原生碼 -->
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <!-- jQuery UI JS CDN -->
+    <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.js"></script>
+    <!-- My JS 最後執行一定是放在最下面 -->
+    <script>
+        // jQuery UI tabs
+        $(function () {
+            $("#album").tabs();
+        });
+    </script>
+
+</body>
+
+</html>

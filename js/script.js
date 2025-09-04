@@ -20,7 +20,8 @@
 //     },
 // });
 
-// < !--Initialize Swiper-- >
+/* 換圖輪播 */
+/* < !--Initialize Swiper-- > */
 var swiper = new Swiper(".mySwiper", {
     direction: "horizontal",
     slidesPerView: 1,
