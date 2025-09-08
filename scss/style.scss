@@ -14,15 +14,15 @@ section {
 }
 
 .title {
+    display: flex;
+    align-items: center;
     margin: $space-title;
 
     h2 {
-        position: relative;
-        display: flex;
-        align-items: center;
         font-size: $f-s-xl;
         border-left: solid 5px $Charcoal;
         padding-left: $space-sm;
+        white-space: nowrap;
 
         span {
             font-size: $f-s-sm;
@@ -31,11 +31,11 @@ section {
 
         &::after {
             content: '';
-            position: relative;
-            left: 14px;
-            width: calc(100% - 10rem);
+            display: inline-block;
+            width: 100%;
             height: 3px;
             background-color: $Charcoal;
+            margin-left: $space-xs;
         }
     }
 }
@@ -174,11 +174,55 @@ section {
     grid-template-columns: 5fr 4fr;
 }
 
+// 相簿自訂樣式
 // jQuery UI tabs
-.ui-tabs .ui-tabs-nav {
-    display: flex;
+.ui-widget.ui-widget-content {
+    max-width: 400px;
 }
 
+.ui-tabs .ui-tabs-panel {
+    height: 70vh;
+
+    img {
+        object-fit: contain;
+        height: 100%;
+    }
+}
+
+.ui-tabs .ui-tabs-nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+.ui-widget-header {
+    background: transparent;
+    border: none;
+}
+
+.ui-tabs .ui-tabs-nav li {
+    border-radius: 3px;
+    border-bottom-width: 1px;
+}
+
+.ui-tabs .ui-tabs-nav .ui-tabs-anchor {
+    padding: 0;
+    height: 80px;
+
+    img {
+        object-fit: cover;
+        height: 100%;
+    }
+}
+
+.ui-state-active,
+.ui-widget-content .ui-state-active,
+.ui-widget-header .ui-state-active,
+a.ui-button:active,
+.ui-button:active,
+.ui-button.ui-state-active:hover {
+    background: $White;
+    border: 1px solid $Charcoal;
+}
 
 
 // 頁尾
