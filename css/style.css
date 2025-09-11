@@ -292,17 +292,27 @@ section {
   gap: 30px;
   grid-template-columns: 5fr 4fr;
 }
+.detail-box mark {
+  background-color: #23f444;
+}
+.detail-box .color1 {
+  background-color: #777771;
+}
+.detail-box .color2 {
+  background-color: #fcf6e3;
+}
+.detail-box .color3 {
+  background-color: #9d6b50;
+}
 
 .ui-widget.ui-widget-content {
   max-width: 400px;
 }
 
-.ui-tabs .ui-tabs-panel {
-  height: 70vh;
-}
 .ui-tabs .ui-tabs-panel img {
   object-fit: contain;
   height: 100%;
+  max-height: 70vh;
 }
 
 .ui-tabs .ui-tabs-nav {

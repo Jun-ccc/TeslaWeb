@@ -4,21 +4,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>女裝-ZARA</title>
+    <title>電動車、太陽能與潔淨能源 | Tesla 台灣</title>
+
+    <meta name="description" content="Tesla 致力透過電動車、太陽能板以及適用於家庭和企業的整合式再生能源解決方案加速推進全球轉向永續能源。">
+
+    <meta property="og:title" content="電動車、太陽能與潔淨能源 | Tesla 台灣">
+    <meta property="og:description" content="Tesla 致力透過電動車、太陽能板以及適用於家庭和企業的整合式再生能源解決方案加速推進全球轉向永續能源。">
+    <meta property="og:image"
+        content="https://digitalassets.tesla.com/tesla-contents/image/upload/f_auto,q_auto/Homepage-Social-Image-Day-Hero-APAC-SA-JO-IL.jpg">
+
     <!-- jQuery UI CSS CDN -->
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.14.1/themes/base/jquery-ui.css">
     <!-- Lightbox CSS -->
     <Link rel="stylesheet" href="./css/lightbox.min.css">
     <!-- My CSS 權重最重一定是放在最下面 -->
     <link rel="stylesheet" href="./css/style.min.css">
+    <!-- tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
 <body>
     <header class="navbar">Navbar</header>
     <main>
-        <section>
+        <section class="w-4/5 mx-auto">
             <header class="title">
-                <h2>ZT系列 軟質T恤-中灰色</h2>
+                <h2>女裝/RA系列</h2>
             </header>
 
             <div class="detail-box">
@@ -62,10 +72,56 @@
 
                 <!-- 詳細規格 -->
                 <div class="details"></div>
+                <h1 class=".text-2xl font-bold">
+                    <data value="3039-468-809">軟質 T 恤</data>
+                </h1>
+
+                <div class="price">
+                    <del>NT$ 990</del>
+                    <mark class="text-xl font-medium">-50% &nbsp;&nbsp; NT$ 495</mark>
+                </div>
+
+                <h3 class="text-sm font-bold mt-4 mb-3">選擇顏色：</h3>
+                <div class="color-box">
+                    <button type="button" class="color1 w-7 h-7"></button>
+                    <button type="button" class="color2 w-7 h-7"></button>
+                    <button type="button" class="color3 w-7 h-7"></button>
+                </div>
+
+                <h3 class="text-sm font-bold mt-4 mb-3">選擇尺寸：</h3>
+                <div class="size-box">
+                    <button type="button" class="w-9 h-8 border-2 border-solid hover:border-green-500">S</button>
+                    <button type="button" class="w-9 h-8 border-2 border-solid hover:border-green-500">M</button>
+                    <button type="button" class="w-9 h-8 border-2 border-solid hover:border-green-500">L</button>
+                    <button type="button" class="w-9 h-8 border-2 border-solid hover:border-green-500">XL</button>
+                </div>
+
+                <details class="mt-4 mb-3">
+                    <summary class="text-sm font-bold mt-4 mb-3">材質</summary>
+                    <pre class="text-sm">
+45% 亞克力纖維
+33% 聚酯纖維
+22% 聚醯胺纖維
+                    </pre>
+                </details>
+
+                <p class="text-sm">
+                    圓領上衣；落肩袖。<br>
+                    模特兒身高：174 cm | 尺碼：XS
+                </p>
+
+
             </div>
 
             <!-- html編輯器 -->
-            <div class="content"></div>
+            <div class="content w-4/5">
+                <h2 class="mt-6 mb-4 text-xl font-bold">產品細節</h2>
+                <img src="./images/details/detail-1.jpg" alt="">
+                <img src="./images/details/detail-2.jpg" alt="">
+                <img src="./images/details/detail-3.jpg" alt="">
+                <img src="./images/details/detail-4.jpg" alt="">
+                <img src="./images/details/detail-5.jpg" alt="">
+            </div>
         </section>
     </main>
 
@@ -85,6 +141,12 @@
         $(function () {
             $("#album").tabs();
         });
+
+        // lightbox
+        lightbox.option({
+            'wrapAround': true,
+            'showImageNumberLabel': false
+        })
     </script>
 
 </body>

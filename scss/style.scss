@@ -172,6 +172,22 @@ section {
     display: grid;
     gap: 30px;
     grid-template-columns: 5fr 4fr;
+
+    mark {
+        background-color: #23f444;
+    }
+
+    .color1 {
+        background-color: #777771;
+    }
+
+    .color2 {
+        background-color: #fcf6e3;
+    }
+
+    .color3 {
+        background-color: #9d6b50;
+    }
 }
 
 // 相簿自訂樣式
@@ -181,11 +197,12 @@ section {
 }
 
 .ui-tabs .ui-tabs-panel {
-    height: 70vh;
+    // height: 70vh;
 
     img {
         object-fit: contain;
         height: 100%;
+        max-height: 70vh;
     }
 }
 
